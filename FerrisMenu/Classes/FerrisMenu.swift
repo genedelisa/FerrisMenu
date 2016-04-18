@@ -1,6 +1,6 @@
 //
 //  FerrisMenu.swift
-//  CircleLayout
+//  FerrisMenu
 //
 //  Created by Gene De Lisa on 4/18/16.
 //  Copyright © 2016 Gene De Lisa. All rights reserved.
@@ -47,10 +47,9 @@ public class FerrisMenu : UIView {
     
     var buttons = [UIButton]()
     
-    @IBInspectable
     var numberOfButtons = 0.0
     
-    let buttonDiameter = CGFloat(25.0)
+    //let buttonDiameter = CGFloat(25.0)
     
     var touchBeginAngle = CGFloat(0)
     
@@ -182,9 +181,6 @@ public class FerrisMenu : UIView {
     func angleBetweenCenterAndPoint(point:CGPoint) -> CGFloat {
         let center = CGPoint(x: self.bounds.size.width / 2.0,
                              y: self.bounds.size.height / 2.0)
-        
-        //  atan2 reurns the angle in radians between the positive x axis and the point given by the coordinates.  Calculate the x and y distance of a touch from the center of our view and pass that to atan2, which will return us the angle of the touch relative to our center
-        
         return atan2(center.y - point.y, point.x - center.x)
     }
     
