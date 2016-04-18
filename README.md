@@ -18,7 +18,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-FerrisMenu is available through [CocoaPods](http://cocoapods.org). T
+FerrisMenu is available through [CocoaPods](http://cocoapods.org). 
 
 
 ## Blog post for this example.
