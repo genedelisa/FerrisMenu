@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FerrisMenu_Example', :exclusive => true do
+  pod 'FerrisMenu', :path => '../'
+end
+
+target 'FerrisMenu_Tests', :exclusive => true do
+  pod 'FerrisMenu', :path => '../'
+
+  
+end
