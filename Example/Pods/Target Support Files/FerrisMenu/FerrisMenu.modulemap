@@ -1,0 +1,6 @@
+framework module FerrisMenu {
+  umbrella header "FerrisMenu-umbrella.h"
+
+  export *
+  module * { export * }
+}

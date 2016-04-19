@@ -1,0 +1,14 @@
+PODS:
+  - FerrisMenu (0.1.0)
+
+DEPENDENCIES:
+  - FerrisMenu (from `../`)
+
+EXTERNAL SOURCES:
+  FerrisMenu:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FerrisMenu: 144236945e25690739ed9399bfc6ec7c2e4d8afa
+
+COCOAPODS: 0.39.0

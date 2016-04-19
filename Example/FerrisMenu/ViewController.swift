@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         
         let diameter = 200
         ferrisMenu = FerrisMenu(frame: CGRect(x: 0,y: 0,width: diameter,height: diameter))
+        ferrisMenu.backgroundColor = UIColor.yellowColor()
         ferrisMenu.alpha = 0
         ferrisMenu.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
         self.view.addSubview(ferrisMenu)
@@ -77,7 +78,7 @@ class ViewController: UIViewController {
     
     func buttonAction(button:UIButton) {
         print("vc \(button.tag)")
-        ferrisMenu.hide()
+        //ferrisMenu.hide()
     }
     
     override func didReceiveMemoryWarning() {

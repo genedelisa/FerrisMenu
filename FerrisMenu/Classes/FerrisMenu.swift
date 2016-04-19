@@ -38,20 +38,25 @@ public struct FerrisMenuItem {
     }
 }
 
-@IBDesignable
+
 public class FerrisMenu : UIView {
-    let debug = false
-    
-    @IBInspectable
+
+    private let debug = false
+
     var diameter = CGFloat(200)
     
     var buttons = [UIButton]()
     
-    var numberOfButtons = 0.0
+    private var numberOfButtons = 0.0
     
-    //let buttonDiameter = CGFloat(25.0)
+    private var touchBeginAngle = CGFloat(0)
     
-    var touchBeginAngle = CGFloat(0)
+    /// should the menu close when a button is pressed?
+    var hideOnButtonAction = true
+    
+    /// does it move?
+    var stationary = false
+    
     
     public override init(frame: CGRect) {
         super.init(frame:frame)
@@ -65,6 +70,8 @@ public class FerrisMenu : UIView {
     
     func commonInit() {
         diameter = frame.size.width
+        self.layer.cornerRadius = diameter / 2.0
+        
     }
     
     public func createMenu(items:[FerrisMenuItem]) {
@@ -73,6 +80,10 @@ public class FerrisMenu : UIView {
         }
         
         self.numberOfButtons = Double(items.count)
+        
+        // half a circle of buttons
+        //self.numberOfButtons = Double(items.count) * M_PI / 2
+        
         print("creating menu with \(numberOfButtons) buttons")
         
         // in radians
@@ -94,6 +105,12 @@ public class FerrisMenu : UIView {
             button.tag = i
             button.addTarget(items[i].target, action: items[i].selector,
                              forControlEvents:.TouchUpInside)
+            
+            if hideOnButtonAction {
+                button.addTarget(self, action: #selector(buttonAction(_:)),
+                                 forControlEvents:.TouchUpInside)
+                
+            }
             
             
             if let title = items[i].title {
@@ -142,7 +159,7 @@ public class FerrisMenu : UIView {
                     button.setImage(icon, forState: .Normal )
                     button.sizeToFit()
                     button.backgroundColor = UIColor.clearColor()
-
+                    
                 }
             }
             
@@ -175,7 +192,10 @@ public class FerrisMenu : UIView {
     }
     
     func buttonAction(button:UIButton) {
-        print(button.tag)
+        print("hiding action")
+        if hideOnButtonAction {
+            hide()
+        }
     }
     
     func angleBetweenCenterAndPoint(point:CGPoint) -> CGFloat {
@@ -191,13 +211,15 @@ public class FerrisMenu : UIView {
     }
     
     override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let point = touches.first?.locationInView(self) {
-            let currentAngle = angleBetweenCenterAndPoint(point)
-            let angleDifference = touchBeginAngle - currentAngle
-            self.transform = CGAffineTransformRotate(self.transform, angleDifference)
-            // make the buttons "right side up"
-            for i in 0..<buttons.count {
-                buttons[i].transform = CGAffineTransformRotate(buttons[i].transform, -CGFloat(angleDifference) * CGFloat(1))
+        if !stationary {
+            if let point = touches.first?.locationInView(self) {
+                let currentAngle = angleBetweenCenterAndPoint(point)
+                let angleDifference = touchBeginAngle - currentAngle
+                self.transform = CGAffineTransformRotate(self.transform, angleDifference)
+                // make the buttons "right side up"
+                for i in 0..<buttons.count {
+                    buttons[i].transform = CGAffineTransformRotate(buttons[i].transform, -CGFloat(angleDifference) * CGFloat(1))
+                }
             }
         }
     }
