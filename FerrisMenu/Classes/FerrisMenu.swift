@@ -45,17 +45,17 @@ public class FerrisMenu : UIView {
 
     var diameter = CGFloat(200)
     
-    var buttons = [UIButton]()
+    public var buttons = [UIButton]()
     
     private var numberOfButtons = 0.0
     
     private var touchBeginAngle = CGFloat(0)
     
     /// should the menu close when a button is pressed?
-    var hideOnButtonAction = true
+    public var hideOnButtonAction = true
     
     /// does it move?
-    var stationary = false
+    public var stationary = false
     
     
     public override init(frame: CGRect) {
@@ -86,8 +86,14 @@ public class FerrisMenu : UIView {
         
         print("creating menu with \(numberOfButtons) buttons")
         
+        let startAngle = 0
+        // half a circle
+//        let thetaFactor = M_PI / 2
+        let thetaFactor = 1.0
+        
         // in radians
-        let theta = 2.0 * M_PI / self.numberOfButtons
+        let theta = 2.0 * M_PI / (self.numberOfButtons * thetaFactor)
+
         
         for i in 0 ..< Int(items.count) {
             // each view has its own container. so the label can be rotated. Otherwise the label
@@ -100,18 +106,14 @@ public class FerrisMenu : UIView {
             }
             
             let button = UIButton(type: .Custom)
-            
             button.backgroundColor = UIColor.greenColor()
             button.tag = i
             button.addTarget(items[i].target, action: items[i].selector,
                              forControlEvents:.TouchUpInside)
-            
             if hideOnButtonAction {
                 button.addTarget(self, action: #selector(buttonAction(_:)),
                                  forControlEvents:.TouchUpInside)
-                
             }
-            
             
             if let title = items[i].title {
                 button.setTitle("\(title)", forState: .Normal)
@@ -180,9 +182,9 @@ public class FerrisMenu : UIView {
             container.layer.position = CGPoint(x: self.bounds.size.width / 2.0,
                                                y: self.bounds.size.height / 2.0)
             
-            let rotation = CGFloat(theta) * CGFloat(i)
+            let rotation = CGFloat(theta) * CGFloat(i) + CGFloat(startAngle)
             container.transform = CGAffineTransformMakeRotation(rotation)
-            let buttonRotation = -rotation
+            let buttonRotation =  CGFloat(theta) * CGFloat(i)  * -1
             button.transform = CGAffineTransformMakeRotation(buttonRotation)
             
             container.addSubview(button)

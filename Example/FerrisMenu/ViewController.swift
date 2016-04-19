@@ -11,6 +11,7 @@ import FerrisMenu
 class ViewController: UIViewController {
 
     var ferrisMenu:FerrisMenu!
+    var textFerrisMenu:FerrisMenu!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,18 @@ class ViewController: UIViewController {
         ferrisMenu.backgroundColor = UIColor.yellowColor()
         ferrisMenu.alpha = 0
         ferrisMenu.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
+        ferrisMenu.hideOnButtonAction = true
+        ferrisMenu.stationary = false
         self.view.addSubview(ferrisMenu)
+       
+        textFerrisMenu = FerrisMenu(frame: CGRect(x: 0,y: 0,width: diameter,height: diameter))
+        textFerrisMenu.backgroundColor = UIColor.orangeColor()
+        textFerrisMenu.alpha = 0
+        textFerrisMenu.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
+        textFerrisMenu.hideOnButtonAction = true
+        textFerrisMenu.stationary = false
+        self.view.addSubview(textFerrisMenu)
+
         
         let iconItems = [
             FerrisMenuItem(title: nil,
@@ -62,23 +74,24 @@ class ViewController: UIViewController {
                 iconName: nil,
                 target: self,
                 selector: #selector(ViewController.buttonAction(_:)),
-                font:nil,
-                backgroundColor: UIColor.blueColor()),
+                font: UIFont.boldSystemFontOfSize(36),
+                textColor: UIColor.whiteColor(),
+                backgroundColor: UIColor.greenColor()),
             FerrisMenuItem(title: "mar",
                 iconName: nil,
                 target: self,
                 selector: #selector(ViewController.buttonAction(_:)),
                 font:nil,
+                textColor: UIColor.yellowColor(),
                 backgroundColor: UIColor.blueColor())
         ]
         
-        //        ferrisMenu.createMenu(items)
+        textFerrisMenu.createMenu(items)
         ferrisMenu.createMenu(iconItems)
     }
     
     func buttonAction(button:UIButton) {
         print("vc \(button.tag)")
-        //ferrisMenu.hide()
     }
     
     override func didReceiveMemoryWarning() {
@@ -92,6 +105,14 @@ class ViewController: UIViewController {
         } else {
             print("displaying")
             ferrisMenu.display()
+        }
+    }
+    
+    @IBAction func showTextMenuAction(sender: AnyObject) {
+        if textFerrisMenu.displayed {
+            textFerrisMenu.hide()
+        } else {
+            textFerrisMenu.display()
         }
     }
 }

@@ -17,18 +17,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfc-KQ-tER">
-                                <rect key="frame" x="281" y="525" width="39" height="30"/>
-                                <state key="normal" title="Menu"/>
-                                <connections>
-                                    <action selector="showMenuAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j2i-jI-DZj"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p2X-WN-e5D">
+                                <rect key="frame" x="224" y="525" width="152" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGB-ja-M8d">
+                                        <rect key="frame" x="0.0" y="0.0" width="72" height="30"/>
+                                        <state key="normal" title="Text Menu"/>
+                                        <connections>
+                                            <action selector="showTextMenuAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MML-BZ-gWj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfc-KQ-tER">
+                                        <rect key="frame" x="80" y="0.0" width="72" height="30"/>
+                                        <state key="normal" title="Icon Menu"/>
+                                        <connections>
+                                            <action selector="showMenuAction:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j2i-jI-DZj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Vfc-KQ-tER" secondAttribute="bottom" constant="45" id="YRM-u6-BuC"/>
-                            <constraint firstItem="Vfc-KQ-tER" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="cwt-vK-AUH"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="p2X-WN-e5D" secondAttribute="bottom" constant="45" id="fxa-d0-scy"/>
+                            <constraint firstItem="p2X-WN-e5D" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="gnr-1L-Bdv"/>
                         </constraints>
                     </view>
                 </viewController>
