@@ -1,11 +1,11 @@
 # FerrisMenu
 
-[![CI Status](http://img.shields.io/travis/GeneDeLisa/FerrisMenu.svg?style=flat)](https://travis-ci.org/GeneDeLisa/FerrisMenu)
+[![CI Status](http://img.shields.io/travis/GeneDeLisa/FerrisMenu.svg?style=flat)](https://travis-ci.org/genedelisa/FerrisMenu)
 [![Version](https://img.shields.io/cocoapods/v/FerrisMenu.svg?style=flat)](http://cocoapods.org/pods/FerrisMenu)
 [![License](https://img.shields.io/cocoapods/l/FerrisMenu.svg?style=flat)](http://cocoapods.org/pods/FerrisMenu)
 [![Platform](https://img.shields.io/cocoapods/p/FerrisMenu.svg?style=flat)](http://cocoapods.org/pods/FerrisMenu)
 [![Swift 2](https://img.shields.io/badge/swift2.2-compatible-4BC51D.svg?style=flat")](https://developer.apple.com/swift)
-
+[![Platform (iOS)](https://img.shields.io/badge/platform-iOS9-blue.svg?style=flat-square)](http://www.apple.com/ios/)
 
 A menu with buttons laid out in a circle. You can rotate the circle and the buttons will stay "ride side up" like
 a Ferris Wheel.
@@ -15,6 +15,8 @@ a Ferris Wheel.
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
+iOS 9
 
 ## Installation
 
