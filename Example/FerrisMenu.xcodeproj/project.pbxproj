@@ -14,8 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		B04E170F1CC7C9D0001A0E3F /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B04E170E1CC7C9D0001A0E3F /* .travis.yml */; };
 		B0C6A7311CC560E30064B1F2 /* icons license.txt in Resources */ = {isa = PBXBuildFile; fileRef = B0C6A7301CC560E30064B1F2 /* icons license.txt */; };
-		B0C6A7331CC569F80064B1F2 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = B0C6A7321CC569F80064B1F2 /* .travis.yml */; };
 		C97D38448CCAE60D5F6FCD08 /* Pods_FerrisMenu_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1729F58DAFD01F96311C7C4D /* Pods_FerrisMenu_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,8 +47,8 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		A8E22A10AD9150A0CD0C36B8 /* Pods-FerrisMenu_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerrisMenu_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FerrisMenu_Tests/Pods-FerrisMenu_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		ACFBA433005B59A77F32E392 /* Pods-FerrisMenu_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerrisMenu_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FerrisMenu_Example/Pods-FerrisMenu_Example.release.xcconfig"; sourceTree = "<group>"; };
+		B04E170E1CC7C9D0001A0E3F /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		B0C6A7301CC560E30064B1F2 /* icons license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "icons license.txt"; sourceTree = "<group>"; };
-		B0C6A7321CC569F80064B1F2 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		C03F934480D0971EE38A27B6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F2E0865934F3083BC7546BA0 /* Pods-FerrisMenu_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FerrisMenu_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FerrisMenu_Tests/Pods-FerrisMenu_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,7 +76,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				B0C6A7321CC569F80064B1F2 /* .travis.yml */,
+				B04E170E1CC7C9D0001A0E3F /* .travis.yml */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for FerrisMenu */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -252,7 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0C6A7331CC569F80064B1F2 /* .travis.yml in Resources */,
+				B04E170F1CC7C9D0001A0E3F /* .travis.yml in Resources */,
 				B0C6A7311CC560E30064B1F2 /* icons license.txt in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
