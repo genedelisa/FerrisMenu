@@ -38,11 +38,17 @@ public struct FerrisMenuItem {
     }
 }
 
+public protocol FerrisMenuDelegate {
+    func angleDidChange(radians:CGFloat)
+}
+
 
 public class FerrisMenu : UIView {
-
+    
     private let debug = false
-
+    
+    public var delegate:FerrisMenuDelegate?
+    
     var diameter = CGFloat(200)
     
     public var buttons = [UIButton]()
@@ -51,12 +57,22 @@ public class FerrisMenu : UIView {
     
     private var touchBeginAngle = CGFloat(0)
     
+    private var currentMenuAngle = CGFloat(0)
+    
     /// should the menu close when a button is pressed?
     public var hideOnButtonAction = true
     
     /// does it move?
     public var stationary = false
     
+    /// animation on display
+    public var rotateOnDisplay = false
+    
+    /// animation on hide
+    public var rotateOnHide = true
+    
+    // the angle between buttons
+    var theta = 0.0
     
     public override init(frame: CGRect) {
         super.init(frame:frame)
@@ -74,26 +90,26 @@ public class FerrisMenu : UIView {
         
     }
     
+
     public func createMenu(items:[FerrisMenuItem]) {
         for v in subviews {
             v.removeFromSuperview()
         }
         
         self.numberOfButtons = Double(items.count)
-        
-        // half a circle of buttons
-        //self.numberOfButtons = Double(items.count) * M_PI / 2
-        
         print("creating menu with \(numberOfButtons) buttons")
         
         let startAngle = 0
-        // half a circle
-//        let thetaFactor = M_PI / 2
-        let thetaFactor = 1.0
         
-        // in radians
-        let theta = 2.0 * M_PI / (self.numberOfButtons * thetaFactor)
-
+        // in radians (2pi radians in a unit circle)
+        self.theta =  M_PI * 2.0 / self.numberOfButtons
+        
+        // so this is a half circle
+        //self.theta =  M_PI / (self.numberOfButtons - 1)
+        
+        // this is a quarter circle
+        //self.theta =  M_PI / 2.0 / (self.numberOfButtons - 1)
+        
         
         for i in 0 ..< Int(items.count) {
             // each view has its own container. so the label can be rotated. Otherwise the label
@@ -150,6 +166,7 @@ public class FerrisMenu : UIView {
                                                              attributes: attributes,
                                                              context: nil)
                 
+                // make it a circle
                 let labelPadding = CGFloat(16)
                 button.bounds.size.width = boundingBox.width + labelPadding
                 button.bounds.size.height = button.bounds.size.width
@@ -164,7 +181,8 @@ public class FerrisMenu : UIView {
                     
                 }
             }
-            
+            button.frame.origin.y = container.center.y - (button.bounds.size.height / 2)
+            buttons.append(button)
             
             if debug {
                 button.titleLabel!.textColor = UIColor.redColor()
@@ -173,18 +191,15 @@ public class FerrisMenu : UIView {
                 button.layer.borderWidth = 1
             }
             
-            
-            button.frame.origin.y = container.center.y - (button.bounds.size.height / 2)
-            buttons.append(button)
-            
-            
             container.layer.anchorPoint = CGPoint(x: 1.0, y: 0.5)
             container.layer.position = CGPoint(x: self.bounds.size.width / 2.0,
                                                y: self.bounds.size.height / 2.0)
             
             let rotation = CGFloat(theta) * CGFloat(i) + CGFloat(startAngle)
             container.transform = CGAffineTransformMakeRotation(rotation)
-            let buttonRotation =  CGFloat(theta) * CGFloat(i)  * -1
+            
+            //TODO: make this work for less than a unit circle
+            let buttonRotation =  -rotation
             button.transform = CGAffineTransformMakeRotation(buttonRotation)
             
             container.addSubview(button)
@@ -218,9 +233,20 @@ public class FerrisMenu : UIView {
                 let currentAngle = angleBetweenCenterAndPoint(point)
                 let angleDifference = touchBeginAngle - currentAngle
                 self.transform = CGAffineTransformRotate(self.transform, angleDifference)
+                
+                // same as getting the keypath
+                //self.currentMenuAngle = atan2(transform.b, transform.a)
+                
+                //the rotation, in radians, in the z axis
+                if let angle = self.valueForKeyPath("layer.transform.rotation.z") {
+                    self.currentMenuAngle = CGFloat(angle.doubleValue)
+                    delegate?.angleDidChange(self.currentMenuAngle)
+                }
+                //print("menu angle \(self.currentMenuAngle) \(self.currentMenuAngle.radiansToDegrees)")
+                
                 // make the buttons "right side up"
                 for i in 0..<buttons.count {
-                    buttons[i].transform = CGAffineTransformRotate(buttons[i].transform, -CGFloat(angleDifference) * CGFloat(1))
+                    buttons[i].transform = CGAffineTransformRotate(buttons[i].transform, -CGFloat(angleDifference) )
                 }
             }
         }
@@ -228,19 +254,23 @@ public class FerrisMenu : UIView {
     
     // so the text is "right side up"
     func resetButtonTransform() {
-        let theta = 2.0 * M_PI / numberOfButtons // radians, remember
-        
         for i in 0..<buttons.count {
-            buttons[i].transform = CGAffineTransformMakeRotation(-CGFloat(theta) * CGFloat(i))
+            buttons[i].transform = CGAffineTransformMakeRotation(-CGFloat(self.theta) * CGFloat(i))
         }
     }
     
+
+    // don't set, I should probably make another get only prop based on this.
     public var displayed = false
     
     public func display(duration: Double = 1, delay: Double = 0) {
         displayed = true
         self.touchBeginAngle = 0
+        self.currentMenuAngle = 0
         resetButtonTransform()
+        if rotateOnDisplay {
+            rotate(1)
+        }
         self.transform = CGAffineTransformMakeScale(0, 0)
         UIView.animateWithDuration(
             duration,
@@ -259,6 +289,9 @@ public class FerrisMenu : UIView {
     
     public func hide(duration: Double = 1, delay: Double = 0) {
         displayed = false
+        if rotateOnHide {
+            rotate(1)
+        }
         self.transform = CGAffineTransformRotate(self.transform, 0)
         UIView.animateWithDuration(
             duration,
@@ -272,29 +305,36 @@ public class FerrisMenu : UIView {
         
     }
     
+    func rotate(repeatCount:Float = FLT_MAX) {
+        let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+        rotation.toValue = M_PI * 2.0
+        rotation.duration = 1
+        rotation.cumulative = true
+        rotation.repeatCount = repeatCount
+        self.layer.addAnimation(rotation, forKey: "rotationAnimation")
+    }
     
     
 }
 
-
+extension Int {
+    var degreesToRadians: Double { return Double(self) * M_PI / 180 }
+    var radiansToDegrees: Double { return Double(self) * 180 / M_PI }
+}
 
 extension Double {
-    var radians: Double {
-        return self * (Double(180) / Double(M_PI))
-    }
-    
-    var degrees: Double {
-        return self  * Double(M_PI) / 180.0
-    }
+    var degreesToRadians: Double { return self * M_PI / 180 }
+    var radiansToDegrees: Double { return self * 180 / M_PI }
 }
 
+extension CGFloat {
+    var doubleValue:      Double  { return Double(self) }
+    var degreesToRadians: CGFloat { return CGFloat(doubleValue * M_PI / 180) }
+    var radiansToDegrees: CGFloat { return CGFloat(doubleValue * 180 / M_PI) }
+}
 
-extension Float {
-    var radians: Float {
-        return self * (Float(180) / Float(M_PI))
-    }
-    
-    var degrees: Float {
-        return self  * Float(M_PI) / 180.0
-    }
+extension Float  {
+    var doubleValue:      Double { return Double(self) }
+    var degreesToRadians: Float  { return Float(doubleValue * M_PI / 180) }
+    var radiansToDegrees: Float  { return Float(doubleValue * 180 / M_PI) }
 }

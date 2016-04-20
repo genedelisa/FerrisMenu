@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         ferrisMenu.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
         ferrisMenu.hideOnButtonAction = true
         ferrisMenu.stationary = false
+        ferrisMenu.delegate = self
         self.view.addSubview(ferrisMenu)
        
         textFerrisMenu = FerrisMenu(frame: CGRect(x: 0,y: 0,width: diameter,height: diameter))
@@ -31,6 +32,8 @@ class ViewController: UIViewController {
         textFerrisMenu.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
         textFerrisMenu.hideOnButtonAction = true
         textFerrisMenu.stationary = false
+        textFerrisMenu.delegate = self
+        textFerrisMenu.rotateOnDisplay = true
         self.view.addSubview(textFerrisMenu)
 
         
@@ -116,4 +119,11 @@ class ViewController: UIViewController {
         }
     }
 }
+
+extension ViewController : FerrisMenuDelegate {
+    func angleDidChange(radians: CGFloat) {
+        print("angle \(radians)")
+    }
+}
+
 
