@@ -71,8 +71,14 @@ public class FerrisMenu : UIView {
     /// animation on hide
     public var rotateOnHide = true
     
+    /// make all buttons the size of the largest button. Useful for text buttons.
+    public var equalSizeButtons = true
+    
     // the angle between buttons
     var theta = 0.0
+
+    /// the padding between the button's content and frame
+    var labelPadding = CGFloat(16)
     
     public override init(frame: CGRect) {
         super.init(frame:frame)
@@ -167,18 +173,13 @@ public class FerrisMenu : UIView {
                                                              context: nil)
                 
                 // make it a circle
-                let labelPadding = CGFloat(16)
-                button.bounds.size.width = boundingBox.width + labelPadding
-                button.bounds.size.height = button.bounds.size.width
-                button.layer.cornerRadius = button.bounds.size.width / 2.0
-                
+                setButtonSize(button, diameter: boundingBox.width)
             }
             if let iconName = items[i].iconName {
                 if let icon = UIImage(named: iconName) {
                     button.setImage(icon, forState: .Normal )
                     button.sizeToFit()
                     button.backgroundColor = UIColor.clearColor()
-                    
                 }
             }
             button.frame.origin.y = container.center.y - (button.bounds.size.height / 2)
@@ -206,7 +207,30 @@ public class FerrisMenu : UIView {
             self.addSubview(container)
         }
         
+        if equalSizeButtons {
+            equalizeButtonSizes()
+        }
     }
+    
+    func equalizeButtonSizes() {
+        let maxsize: CGFloat = buttons.map{ $0.bounds.size.width }.reduce(CGFloat.min, combine: max)
+        
+        buttons.map({
+            setButtonSize($0, diameter: maxsize - labelPadding)
+        })
+    }
+
+
+    ///  Make the button a circle
+    ///
+    ///  - parameter button: the button to modify
+    ///  - parameter diameter:   the diameter
+    func setButtonSize(button:UIButton, diameter:CGFloat) {
+        button.bounds.size.width = diameter + labelPadding
+        button.bounds.size.height = button.bounds.size.width
+        button.layer.cornerRadius = button.bounds.size.width / 2.0
+    }
+    
     
     func buttonAction(button:UIButton) {
         print("hiding action")

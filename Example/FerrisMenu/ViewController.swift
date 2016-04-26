@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         let diameter = 200
         ferrisMenu = FerrisMenu(frame: CGRect(x: 0,y: 0,width: diameter,height: diameter))
-        ferrisMenu.backgroundColor = UIColor.yellowColor()
+        ferrisMenu.backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(0.6)
         ferrisMenu.alpha = 0
         ferrisMenu.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
         ferrisMenu.hideOnButtonAction = true
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         self.view.addSubview(ferrisMenu)
        
         textFerrisMenu = FerrisMenu(frame: CGRect(x: 0,y: 0,width: diameter,height: diameter))
-        textFerrisMenu.backgroundColor = UIColor.orangeColor()
+        textFerrisMenu.backgroundColor = UIColor.orangeColor().colorWithAlphaComponent(0.6)
         textFerrisMenu.alpha = 0
         textFerrisMenu.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
         textFerrisMenu.hideOnButtonAction = true
@@ -80,7 +80,7 @@ class ViewController: UIViewController {
                 font: UIFont.boldSystemFontOfSize(36),
                 textColor: UIColor.whiteColor(),
                 backgroundColor: UIColor.greenColor()),
-            FerrisMenuItem(title: "mar",
+            FerrisMenuItem(title: "really long label",
                 iconName: nil,
                 target: self,
                 selector: #selector(ViewController.buttonAction(_:)),

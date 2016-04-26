@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "FerrisMenu"
-  s.version          = "0.1.0"
-  s.summary          = "A circular menu."
+  s.version          = "0.3.0"
+  s.summary          = "A circular menu that rotates like a Ferris Wheel."
 
 
   s.description      = <<-DESC
