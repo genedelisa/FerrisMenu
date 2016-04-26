@@ -215,9 +215,9 @@ public class FerrisMenu : UIView {
     func equalizeButtonSizes() {
         let maxsize: CGFloat = buttons.map{ $0.bounds.size.width }.reduce(CGFloat.min, combine: max)
         
-        buttons.map({
+        buttons.forEach {
             setButtonSize($0, diameter: maxsize - labelPadding)
-        })
+        }
     }
 
 
