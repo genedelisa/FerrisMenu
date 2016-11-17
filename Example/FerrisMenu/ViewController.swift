@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         
         let diameter = 200
         ferrisMenu = FerrisMenu(frame: CGRect(x: 0,y: 0,width: diameter,height: diameter))
-        ferrisMenu.backgroundColor = UIColor.yellowColor().colorWithAlphaComponent(0.6)
+        ferrisMenu.backgroundColor = UIColor.yellow.withAlphaComponent(0.6)
         ferrisMenu.alpha = 0
         ferrisMenu.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
         ferrisMenu.hideOnButtonAction = true
@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         self.view.addSubview(ferrisMenu)
        
         textFerrisMenu = FerrisMenu(frame: CGRect(x: 0,y: 0,width: diameter,height: diameter))
-        textFerrisMenu.backgroundColor = UIColor.orangeColor().colorWithAlphaComponent(0.6)
+        textFerrisMenu.backgroundColor = UIColor.orange.withAlphaComponent(0.6)
         textFerrisMenu.alpha = 0
         textFerrisMenu.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
         textFerrisMenu.hideOnButtonAction = true
@@ -71,29 +71,29 @@ class ViewController: UIViewController {
                 target: self,
                 selector: #selector(ViewController.buttonAction(_:)),
                 font:nil,
-                textColor: UIColor.whiteColor(),
-                backgroundColor: UIColor.blueColor()),
+                textColor: UIColor.white,
+                backgroundColor: UIColor.blue),
             FerrisMenuItem(title: "bar",
                 iconName: nil,
                 target: self,
                 selector: #selector(ViewController.buttonAction(_:)),
-                font: UIFont.boldSystemFontOfSize(36),
-                textColor: UIColor.whiteColor(),
-                backgroundColor: UIColor.greenColor()),
+                font: UIFont.boldSystemFont(ofSize: 36),
+                textColor: UIColor.white,
+                backgroundColor: UIColor.green),
             FerrisMenuItem(title: "really long label",
                 iconName: nil,
                 target: self,
                 selector: #selector(ViewController.buttonAction(_:)),
                 font:nil,
-                textColor: UIColor.yellowColor(),
-                backgroundColor: UIColor.blueColor())
+                textColor: UIColor.yellow,
+                backgroundColor: UIColor.blue)
         ]
         
         textFerrisMenu.createMenu(items)
         ferrisMenu.createMenu(iconItems)
     }
     
-    func buttonAction(button:UIButton) {
+    func buttonAction(_ button:UIButton) {
         print("vc \(button.tag)")
     }
     
@@ -101,7 +101,7 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    @IBAction func showMenuAction(sender: AnyObject) {
+    @IBAction func showMenuAction(_ sender: AnyObject) {
         if ferrisMenu.displayed {
             print("hiding")
             ferrisMenu.hide()
@@ -111,7 +111,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func showTextMenuAction(sender: AnyObject) {
+    @IBAction func showTextMenuAction(_ sender: AnyObject) {
         if textFerrisMenu.displayed {
             textFerrisMenu.hide()
         } else {
@@ -121,7 +121,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController : FerrisMenuDelegate {
-    func angleDidChange(radians: CGFloat) {
+    func angleDidChange(_ radians: CGFloat) {
         print("angle \(radians)")
     }
 }

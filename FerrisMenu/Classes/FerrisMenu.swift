@@ -39,40 +39,40 @@ public struct FerrisMenuItem {
 }
 
 public protocol FerrisMenuDelegate {
-    func angleDidChange(radians:CGFloat)
+    func angleDidChange(_ radians:CGFloat)
 }
 
 
-public class FerrisMenu : UIView {
+open class FerrisMenu : UIView {
     
-    private let debug = false
+    fileprivate let debug = false
     
-    public var delegate:FerrisMenuDelegate?
+    open var delegate:FerrisMenuDelegate?
     
     var diameter = CGFloat(200)
     
-    public var buttons = [UIButton]()
+    open var buttons = [UIButton]()
     
-    private var numberOfButtons = 0.0
+    fileprivate var numberOfButtons = 0.0
     
-    private var touchBeginAngle = CGFloat(0)
+    fileprivate var touchBeginAngle = CGFloat(0)
     
-    private var currentMenuAngle = CGFloat(0)
+    fileprivate var currentMenuAngle = CGFloat(0)
     
     /// should the menu close when a button is pressed?
-    public var hideOnButtonAction = true
+    open var hideOnButtonAction = true
     
     /// does it move?
-    public var stationary = false
+    open var stationary = false
     
     /// animation on display
-    public var rotateOnDisplay = false
+    open var rotateOnDisplay = false
     
     /// animation on hide
-    public var rotateOnHide = true
+    open var rotateOnHide = true
     
     /// make all buttons the size of the largest button. Useful for text buttons.
-    public var equalSizeButtons = true
+    open var equalSizeButtons = true
     
     // the angle between buttons
     var theta = 0.0
@@ -97,7 +97,7 @@ public class FerrisMenu : UIView {
     }
     
 
-    public func createMenu(items:[FerrisMenuItem]) {
+    open func createMenu(_ items:[FerrisMenuItem]) {
         for v in subviews {
             v.removeFromSuperview()
         }
@@ -122,33 +122,33 @@ public class FerrisMenu : UIView {
             // at 6 oclock will be upside down.
             let container = UIView(frame: CGRect(x: 0, y: 0, width: diameter/2, height: 50))
             if debug {
-                container.backgroundColor = UIColor.blueColor()
-                container.layer.borderColor = UIColor.blueColor().CGColor
+                container.backgroundColor = UIColor.blue
+                container.layer.borderColor = UIColor.blue.cgColor
                 container.layer.borderWidth = 1
             }
             
-            let button = UIButton(type: .Custom)
-            button.backgroundColor = UIColor.greenColor()
+            let button = UIButton(type: .custom)
+            button.backgroundColor = UIColor.green
             button.tag = i
             button.addTarget(items[i].target, action: items[i].selector,
-                             forControlEvents:.TouchUpInside)
+                             for:.touchUpInside)
             if hideOnButtonAction {
                 button.addTarget(self, action: #selector(buttonAction(_:)),
-                                 forControlEvents:.TouchUpInside)
+                                 for:.touchUpInside)
             }
             
             if let title = items[i].title {
-                button.setTitle("\(title)", forState: .Normal)
-                button.setTitle("\(title)", forState: .Highlighted)
+                button.setTitle("\(title)", for: UIControlState())
+                button.setTitle("\(title)", for: .highlighted)
                 if let textColor = items[i].textColor {
-                    button.setTitleColor(textColor, forState: .Normal)
+                    button.setTitleColor(textColor, for: UIControlState())
                 } else {
-                    button.setTitleColor(UIColor.blackColor(), forState: .Normal)
+                    button.setTitleColor(UIColor.black, for: UIControlState())
                 }
                 if let textColor = items[i].textHighlightColor {
-                    button.setTitleColor(textColor, forState: .Highlighted)
+                    button.setTitleColor(textColor, for: .highlighted)
                 } else {
-                    button.setTitleColor(UIColor.redColor(), forState: .Highlighted)
+                    button.setTitleColor(UIColor.red, for: .highlighted)
                 }
                 
                 if let bg = items[i].backgroundColor {
@@ -161,14 +161,14 @@ public class FerrisMenu : UIView {
                     attributes = [NSFontAttributeName: font]
                     
                 } else {
-                    button.titleLabel!.font = UIFont.systemFontOfSize(UIFont.systemFontSize())
-                    attributes = [NSFontAttributeName: UIFont.systemFontOfSize(UIFont.systemFontSize())]
+                    button.titleLabel!.font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+                    attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: UIFont.systemFontSize)]
                 }
                 
                 button.sizeToFit()
                 let constraintRect = CGSize(width: button.frame.size.width, height: button.frame.size.width)
-                let boundingBox = title.boundingRectWithSize(constraintRect,
-                                                             options: NSStringDrawingOptions.UsesLineFragmentOrigin,
+                let boundingBox = title.boundingRect(with: constraintRect,
+                                                             options: NSStringDrawingOptions.usesLineFragmentOrigin,
                                                              attributes: attributes,
                                                              context: nil)
                 
@@ -177,18 +177,18 @@ public class FerrisMenu : UIView {
             }
             if let iconName = items[i].iconName {
                 if let icon = UIImage(named: iconName) {
-                    button.setImage(icon, forState: .Normal )
+                    button.setImage(icon, for: UIControlState() )
                     button.sizeToFit()
-                    button.backgroundColor = UIColor.clearColor()
+                    button.backgroundColor = UIColor.clear
                 }
             }
             button.frame.origin.y = container.center.y - (button.bounds.size.height / 2)
             buttons.append(button)
             
             if debug {
-                button.titleLabel!.textColor = UIColor.redColor()
-                button.backgroundColor = UIColor.greenColor()
-                button.layer.borderColor = UIColor.redColor().CGColor
+                button.titleLabel!.textColor = UIColor.red
+                button.backgroundColor = UIColor.green
+                button.layer.borderColor = UIColor.red.cgColor
                 button.layer.borderWidth = 1
             }
             
@@ -197,11 +197,11 @@ public class FerrisMenu : UIView {
                                                y: self.bounds.size.height / 2.0)
             
             let rotation = CGFloat(theta) * CGFloat(i) + CGFloat(startAngle)
-            container.transform = CGAffineTransformMakeRotation(rotation)
+            container.transform = CGAffineTransform(rotationAngle: rotation)
             
             //TODO: make this work for less than a unit circle
             let buttonRotation =  -rotation
-            button.transform = CGAffineTransformMakeRotation(buttonRotation)
+            button.transform = CGAffineTransform(rotationAngle: buttonRotation)
             
             container.addSubview(button)
             self.addSubview(container)
@@ -213,7 +213,7 @@ public class FerrisMenu : UIView {
     }
     
     func equalizeButtonSizes() {
-        let maxsize: CGFloat = buttons.map{ $0.bounds.size.width }.reduce(CGFloat.min, combine: max)
+        let maxsize: CGFloat = buttons.map{ $0.bounds.size.width }.reduce(CGFloat.leastNormalMagnitude, max)
         
         buttons.forEach {
             setButtonSize($0, diameter: maxsize - labelPadding)
@@ -225,52 +225,52 @@ public class FerrisMenu : UIView {
     ///
     ///  - parameter button: the button to modify
     ///  - parameter diameter:   the diameter
-    func setButtonSize(button:UIButton, diameter:CGFloat) {
+    func setButtonSize(_ button:UIButton, diameter:CGFloat) {
         button.bounds.size.width = diameter + labelPadding
         button.bounds.size.height = button.bounds.size.width
         button.layer.cornerRadius = button.bounds.size.width / 2.0
     }
     
     
-    func buttonAction(button:UIButton) {
+    func buttonAction(_ button:UIButton) {
         print("hiding action")
         if hideOnButtonAction {
             hide()
         }
     }
     
-    func angleBetweenCenterAndPoint(point:CGPoint) -> CGFloat {
+    func angleBetweenCenterAndPoint(_ point:CGPoint) -> CGFloat {
         let center = CGPoint(x: self.bounds.size.width / 2.0,
                              y: self.bounds.size.height / 2.0)
         return atan2(center.y - point.y, point.x - center.x)
     }
     
-    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        if let point = touches.first?.locationInView(self) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let point = touches.first?.location(in: self) {
             touchBeginAngle = angleBetweenCenterAndPoint(point)
         }
     }
     
-    override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if !stationary {
-            if let point = touches.first?.locationInView(self) {
+            if let point = touches.first?.location(in: self) {
                 let currentAngle = angleBetweenCenterAndPoint(point)
                 let angleDifference = touchBeginAngle - currentAngle
-                self.transform = CGAffineTransformRotate(self.transform, angleDifference)
+                self.transform = self.transform.rotated(by: angleDifference)
                 
                 // same as getting the keypath
                 //self.currentMenuAngle = atan2(transform.b, transform.a)
                 
                 //the rotation, in radians, in the z axis
-                if let angle = self.valueForKeyPath("layer.transform.rotation.z") {
-                    self.currentMenuAngle = CGFloat(angle.doubleValue)
+                if let angle = self.value(forKeyPath: "layer.transform.rotation.z") {
+                    self.currentMenuAngle = CGFloat((angle as AnyObject).doubleValue)
                     delegate?.angleDidChange(self.currentMenuAngle)
                 }
                 //print("menu angle \(self.currentMenuAngle) \(self.currentMenuAngle.radiansToDegrees)")
                 
                 // make the buttons "right side up"
                 for i in 0..<buttons.count {
-                    buttons[i].transform = CGAffineTransformRotate(buttons[i].transform, -CGFloat(angleDifference) )
+                    buttons[i].transform = buttons[i].transform.rotated(by: -CGFloat(angleDifference) )
                 }
             }
         }
@@ -279,15 +279,15 @@ public class FerrisMenu : UIView {
     // so the text is "right side up"
     func resetButtonTransform() {
         for i in 0..<buttons.count {
-            buttons[i].transform = CGAffineTransformMakeRotation(-CGFloat(self.theta) * CGFloat(i))
+            buttons[i].transform = CGAffineTransform(rotationAngle: -CGFloat(self.theta) * CGFloat(i))
         }
     }
     
 
     // don't set, I should probably make another get only prop based on this.
-    public var displayed = false
+    open var displayed = false
     
-    public func display(duration: Double = 1, delay: Double = 0) {
+    open func display(_ duration: Double = 1, delay: Double = 0) {
         displayed = true
         self.touchBeginAngle = 0
         self.currentMenuAngle = 0
@@ -295,15 +295,15 @@ public class FerrisMenu : UIView {
         if rotateOnDisplay {
             rotate(1)
         }
-        self.transform = CGAffineTransformMakeScale(0, 0)
-        UIView.animateWithDuration(
-            duration,
+        self.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(
+            withDuration: duration,
             delay: delay,
             usingSpringWithDamping: 0.7,
             initialSpringVelocity: 0,
-            options: UIViewAnimationOptions.CurveLinear,
+            options: UIViewAnimationOptions.curveLinear,
             animations: {
-                self.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                self.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
                 self.alpha = 1
                 print("displayed \(self)")
             }, completion: { (success) -> Void in
@@ -311,31 +311,31 @@ public class FerrisMenu : UIView {
         
     }
     
-    public func hide(duration: Double = 1, delay: Double = 0) {
+    open func hide(_ duration: Double = 1, delay: Double = 0) {
         displayed = false
         if rotateOnHide {
             rotate(1)
         }
-        self.transform = CGAffineTransformRotate(self.transform, 0)
-        UIView.animateWithDuration(
-            duration,
+        self.transform = self.transform.rotated(by: 0)
+        UIView.animate(
+            withDuration: duration,
             delay: delay,
-            options: UIViewAnimationOptions.CurveEaseIn,
+            options: UIViewAnimationOptions.curveEaseIn,
             animations: {
-                self.transform = CGAffineTransformMakeScale(0.01, 0.01)
+                self.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
             }, completion: { (success) -> Void in
                 self.alpha = 0
         })
         
     }
     
-    func rotate(repeatCount:Float = FLT_MAX) {
+    func rotate(_ repeatCount:Float = FLT_MAX) {
         let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
         rotation.toValue = M_PI * 2.0
         rotation.duration = 1
-        rotation.cumulative = true
+        rotation.isCumulative = true
         rotation.repeatCount = repeatCount
-        self.layer.addAnimation(rotation, forKey: "rotationAnimation")
+        self.layer.add(rotation, forKey: "rotationAnimation")
     }
     
     

@@ -7,133 +7,115 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F7A88D1C070C552CA97F6A1C60AE3DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		57BC6CA3D024B5A5B1BDED0EED4F29AF /* Pods-FerrisMenu_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ED834465A673F0B81562B250CF4EF76 /* Pods-FerrisMenu_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66C2CC1A39433F61D18B7B5EF2FF14BA /* Pods-FerrisMenu_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 800777061F19F388CB7B85D0B22CE6ED /* Pods-FerrisMenu_Example-dummy.m */; };
-		7E2D4CDF9640FA93B76A4F451FB99050 /* FerrisMenu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 30CAEA5A0F29B6D5F306E61516A86E79 /* FerrisMenu.bundle */; };
-		86EC47A27606CF026728919F86F282F0 /* FerrisMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D862669DD3449DD4B3C7FDA31B1735F3 /* FerrisMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9077932D6D8F6F875BD03432CCA61970 /* Pods-FerrisMenu_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81FAD0F1FD42CAB6834190E9A9409884 /* Pods-FerrisMenu_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9EB9CB51C8302862939087A41F280812 /* Pods-FerrisMenu_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30691DBC829967DF99E4C0E928C6946E /* Pods-FerrisMenu_Tests-dummy.m */; };
-		A3E80649EF9F7DA4F69B08ACC8F1D174 /* FerrisMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A920EB67F24D324B9AE952BD53A637DB /* FerrisMenu-dummy.m */; };
-		B0C6A72F1CC55BE40064B1F2 /* FerrisMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C6A72E1CC55BE40064B1F2 /* FerrisMenu.swift */; };
-		F5FD6CD77F869A1D1C616424A8D3AC33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		FF3E649065AC374C66FEF37CD4B20464 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		2D7C8E6E71A7B3A170445C885DB172E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		2FA4DC7ECA27973DA9A2E595967F7A4D /* FerrisMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F68D8CDDE2BA730297298CA1C4C74448 /* FerrisMenu.swift */; };
+		53C496670B797C20465F96F1F551A555 /* Pods-FerrisMenu_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30691DBC829967DF99E4C0E928C6946E /* Pods-FerrisMenu_Tests-dummy.m */; };
+		78083DF78A547223309882483E26CAD2 /* FerrisMenu.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 760CE287FB6002FACD3944549C155DA6 /* FerrisMenu.bundle */; };
+		8C35ACC02D148C50660906AF790BD399 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		96B7CADC82CBB92E635A421B81848410 /* Pods-FerrisMenu_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ED834465A673F0B81562B250CF4EF76 /* Pods-FerrisMenu_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B38E1030D1DF84B3102293693269DBB7 /* FerrisMenu-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 890778D834E5F32652E8851BDB01CF70 /* FerrisMenu-dummy.m */; };
+		CB7D1EC4909D4DF6572E21BBDBABACF9 /* FerrisMenu-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30F296AD607898BAFC4CF9F33D7522D3 /* FerrisMenu-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3D7AF55C9913EB0E52E37C7CBF61AA4 /* Pods-FerrisMenu_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 81FAD0F1FD42CAB6834190E9A9409884 /* Pods-FerrisMenu_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D4F40E0F85A6E0D48B458A219223F92F /* Pods-FerrisMenu_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 800777061F19F388CB7B85D0B22CE6ED /* Pods-FerrisMenu_Example-dummy.m */; };
+		E23010588BA791DDD60DF6834601AE16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		435841682874967BDCBC9F2116A18C0A /* PBXContainerItemProxy */ = {
+		175BD510FB1C6007E4D59CF1AC4A8806 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8F01A6D0F1C16728DE01EB3EAC652080;
+			remoteGlobalIDString = FEC2D85B40A499CF2D87E040E7E71CDE;
 			remoteInfo = FerrisMenu;
 		};
-		7930BC5CE116F901DF072F3EB8BA975A /* PBXContainerItemProxy */ = {
+		88DCB49F83B3526955F6D96C19AAF110 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8F01A6D0F1C16728DE01EB3EAC652080;
-			remoteInfo = FerrisMenu;
-		};
-		965018A8AFE96E299434419D44EC3A6A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C2CF6130AC3BA2DD421CB75B1520C27;
+			remoteGlobalIDString = AABE14FFA00888CCF72FD7A9D5D828C4;
 			remoteInfo = "FerrisMenu-FerrisMenu";
+		};
+		96F833BCBA2410D20EBE794E8FB56E38 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEC2D85B40A499CF2D87E040E7E71CDE;
+			remoteInfo = FerrisMenu;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CD4F2AF2E3E89AD9CD7932E683AC2DD /* ResourceBundle-FerrisMenu-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-FerrisMenu-Info.plist"; sourceTree = "<group>"; };
 		0E234B05797EFE313485595705B4A584 /* Pods-FerrisMenu_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FerrisMenu_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0E2CBFB913EE1D24BBA3AC3EADCD4601 /* Pods-FerrisMenu_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FerrisMenu_Example.modulemap"; sourceTree = "<group>"; };
+		0E2CBFB913EE1D24BBA3AC3EADCD4601 /* Pods-FerrisMenu_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FerrisMenu_Example.modulemap"; sourceTree = "<group>"; };
 		0ED834465A673F0B81562B250CF4EF76 /* Pods-FerrisMenu_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FerrisMenu_Example-umbrella.h"; sourceTree = "<group>"; };
-		125287EFC0DE8754E1804E71D62AFF2D /* Pods_FerrisMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerrisMenu_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20D00AEFE8F3963B302C903C43782F4E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26A3C158050898DBB8E756C659444010 /* Pods-FerrisMenu_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FerrisMenu_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2C5A1C227418E5C9CA0FC797B94F9375 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27AA965C126CB886AF251F9DD121C078 /* FerrisMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FerrisMenu-prefix.pch"; sourceTree = "<group>"; };
 		30691DBC829967DF99E4C0E928C6946E /* Pods-FerrisMenu_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FerrisMenu_Tests-dummy.m"; sourceTree = "<group>"; };
-		30CAEA5A0F29B6D5F306E61516A86E79 /* FerrisMenu.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FerrisMenu.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		30F296AD607898BAFC4CF9F33D7522D3 /* FerrisMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FerrisMenu-umbrella.h"; sourceTree = "<group>"; };
 		3A4ED215DCD042942372D11A25F51CE5 /* Pods-FerrisMenu_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FerrisMenu_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3E8BB025988DCAFEBABCC8A9E2D76EAB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46A2075A330AABE760AA5F636DC9233A /* Pods-FerrisMenu_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FerrisMenu_Tests-resources.sh"; sourceTree = "<group>"; };
 		5FC2FDC6562D5756CBFCB23CF95A5917 /* Pods-FerrisMenu_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FerrisMenu_Example-frameworks.sh"; sourceTree = "<group>"; };
+		67C46EB065AC64EE86DB945965E2B55E /* FerrisMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = FerrisMenu.modulemap; sourceTree = "<group>"; };
 		6DF902F7EB76A97D85C50491FA8B1012 /* Pods-FerrisMenu_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FerrisMenu_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		74B56CD467333E4E4C5048E4F1BB9EB6 /* FerrisMenu.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FerrisMenu.modulemap; sourceTree = "<group>"; };
 		75C63B2069F43B5DF6F7351A7E825DE8 /* Pods-FerrisMenu_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FerrisMenu_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		760CE287FB6002FACD3944549C155DA6 /* FerrisMenu.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = FerrisMenu.bundle; path = FerrisMenu.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		771E59B605EB58E19A766DC34F26B4E3 /* Pods_FerrisMenu_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FerrisMenu_Example.framework; path = "Pods-FerrisMenu_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		800777061F19F388CB7B85D0B22CE6ED /* Pods-FerrisMenu_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FerrisMenu_Example-dummy.m"; sourceTree = "<group>"; };
+		80FF20AEFD03EB541E36A8ECA9C74A15 /* Pods_FerrisMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FerrisMenu_Tests.framework; path = "Pods-FerrisMenu_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81FAD0F1FD42CAB6834190E9A9409884 /* Pods-FerrisMenu_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FerrisMenu_Tests-umbrella.h"; sourceTree = "<group>"; };
+		890778D834E5F32652E8851BDB01CF70 /* FerrisMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FerrisMenu-dummy.m"; sourceTree = "<group>"; };
 		8BAB0515C20A01A60E9293187E9AB332 /* Pods-FerrisMenu_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FerrisMenu_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		98EB5468F7C0127493C415BB24B120FD /* Pods_FerrisMenu_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FerrisMenu_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0AB7ED20165276628DAC8DE7681FEEA /* Pods-FerrisMenu_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FerrisMenu_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A920EB67F24D324B9AE952BD53A637DB /* FerrisMenu-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FerrisMenu-dummy.m"; sourceTree = "<group>"; };
-		B0C6A72E1CC55BE40064B1F2 /* FerrisMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FerrisMenu.swift; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3B8144C5C91D08F0077A05E77BE7951 /* FerrisMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FerrisMenu.framework; path = FerrisMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8074772DE0903920E429882BBD3E216 /* Pods-FerrisMenu_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FerrisMenu_Example-resources.sh"; sourceTree = "<group>"; };
-		C9FFE1F3DF980FF79B357AC6FB16AC79 /* FerrisMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FerrisMenu.xcconfig; sourceTree = "<group>"; };
-		CA23E62BC708E97836841DE486244746 /* FerrisMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FerrisMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D78E35C81650C84FD41114D331D7F887 /* Pods-FerrisMenu_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FerrisMenu_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D862669DD3449DD4B3C7FDA31B1735F3 /* FerrisMenu-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FerrisMenu-umbrella.h"; sourceTree = "<group>"; };
-		E7896D23F47EDE798EAE9FBC136EA745 /* FerrisMenu-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FerrisMenu-prefix.pch"; sourceTree = "<group>"; };
+		F0EB89988E9BC9A20A5895D2EBD7EB4D /* FerrisMenu.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FerrisMenu.xcconfig; sourceTree = "<group>"; };
 		F34FFD866BD0122EC1179791E90D31B7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F591809D4573D0D73587B7D210C25F67 /* Pods-FerrisMenu_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-FerrisMenu_Tests.modulemap"; sourceTree = "<group>"; };
+		F591809D4573D0D73587B7D210C25F67 /* Pods-FerrisMenu_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FerrisMenu_Tests.modulemap"; sourceTree = "<group>"; };
+		F68D8CDDE2BA730297298CA1C4C74448 /* FerrisMenu.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FerrisMenu.swift; sourceTree = "<group>"; };
 		FE828F3A9B4B635D666C6A105BB3CEB7 /* Pods-FerrisMenu_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FerrisMenu_Tests-frameworks.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0745FF2C99C475DA38DDD29BC4C3391C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F5FD6CD77F869A1D1C616424A8D3AC33 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3E129B24B78AE3997D084CE32649DFC6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FF3E649065AC374C66FEF37CD4B20464 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4B6C467D638FC4D3A4FF51585E3EB41C /* Frameworks */ = {
+		22764F0F9304F55CB186A60BCF360468 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		73D7E599FC3004A66CC7F7BA7F9D3863 /* Frameworks */ = {
+		3CF7C5444276F25F4F92BA0ABE943AD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F7A88D1C070C552CA97F6A1C60AE3DF /* Foundation.framework in Frameworks */,
+				8C35ACC02D148C50660906AF790BD399 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8671B77FE5BE0CC049AD5E960662CB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E23010588BA791DDD60DF6834601AE16 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6ADF53B1FDAB8CB0FCE7948E9166DE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D7C8E6E71A7B3A170445C885DB172E0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		050990BBDDCB8978927B8C2616DD66B4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				30CAEA5A0F29B6D5F306E61516A86E79 /* FerrisMenu.bundle */,
-				CA23E62BC708E97836841DE486244746 /* FerrisMenu.framework */,
-				125287EFC0DE8754E1804E71D62AFF2D /* Pods_FerrisMenu_Example.framework */,
-				98EB5468F7C0127493C415BB24B120FD /* Pods_FerrisMenu_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		27E3D9C8956244FBCDD580C69FFA981F /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7E5BAE2F8B02A9807600C71869167A39 /* FerrisMenu */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		39D888CFED9E227BA74C3B75FAE80002 /* Pods-FerrisMenu_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,11 +134,12 @@
 			path = "Target Support Files/Pods-FerrisMenu_Example";
 			sourceTree = "<group>";
 		};
-		47E186FD0C220D242622EC7850C54B01 /* FerrisMenu */ = {
+		52680B42D96E212EA1B9D754AB6B2A62 /* FerrisMenu */ = {
 			isa = PBXGroup;
 			children = (
-				F2FC5B7D5F33F4BC60738D261D32E28A /* Classes */,
+				6265980851A5E43552FA60498EB2D08C /* Classes */,
 			);
+			name = FerrisMenu;
 			path = FerrisMenu;
 			sourceTree = "<group>";
 		};
@@ -169,63 +152,84 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		6265980851A5E43552FA60498EB2D08C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				27E3D9C8956244FBCDD580C69FFA981F /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				050990BBDDCB8978927B8C2616DD66B4 /* Products */,
-				5BE7E2507C0EF2193CAC8EBEE1F62A44 /* Targets Support Files */,
+				F68D8CDDE2BA730297298CA1C4C74448 /* FerrisMenu.swift */,
 			);
+			name = Classes;
+			path = Classes;
 			sourceTree = "<group>";
 		};
-		7E5BAE2F8B02A9807600C71869167A39 /* FerrisMenu */ = {
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				47E186FD0C220D242622EC7850C54B01 /* FerrisMenu */,
-				E4C50094042AE4E0CE8BE0E9B73420F5 /* Support Files */,
-			);
-			name = FerrisMenu;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E4C50094042AE4E0CE8BE0E9B73420F5 /* Support Files */ = {
+		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				74B56CD467333E4E4C5048E4F1BB9EB6 /* FerrisMenu.modulemap */,
-				C9FFE1F3DF980FF79B357AC6FB16AC79 /* FerrisMenu.xcconfig */,
-				A920EB67F24D324B9AE952BD53A637DB /* FerrisMenu-dummy.m */,
-				E7896D23F47EDE798EAE9FBC136EA745 /* FerrisMenu-prefix.pch */,
-				D862669DD3449DD4B3C7FDA31B1735F3 /* FerrisMenu-umbrella.h */,
-				2C5A1C227418E5C9CA0FC797B94F9375 /* Info.plist */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				E28901B324C237F7E99E9810D2B4F745 /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				E888361DC0BBE656FE5EBDF87D841BE8 /* Products */,
+				5BE7E2507C0EF2193CAC8EBEE1F62A44 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		98CADAB993B9C44DCD35F6184EBA4676 /* FerrisMenu */ = {
+			isa = PBXGroup;
+			children = (
+				52680B42D96E212EA1B9D754AB6B2A62 /* FerrisMenu */,
+				DAD261BCBC3A0BE8F34E727F60FEA357 /* Support Files */,
+			);
+			name = FerrisMenu;
+			path = /Users/gene/Development/xcode/gene/Swift/FerrisMenu;
+			sourceTree = "<absolute>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DAD261BCBC3A0BE8F34E727F60FEA357 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				67C46EB065AC64EE86DB945965E2B55E /* FerrisMenu.modulemap */,
+				F0EB89988E9BC9A20A5895D2EBD7EB4D /* FerrisMenu.xcconfig */,
+				890778D834E5F32652E8851BDB01CF70 /* FerrisMenu-dummy.m */,
+				27AA965C126CB886AF251F9DD121C078 /* FerrisMenu-prefix.pch */,
+				30F296AD607898BAFC4CF9F33D7522D3 /* FerrisMenu-umbrella.h */,
+				20D00AEFE8F3963B302C903C43782F4E /* Info.plist */,
+				0CD4F2AF2E3E89AD9CD7932E683AC2DD /* ResourceBundle-FerrisMenu-Info.plist */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/FerrisMenu";
 			sourceTree = "<group>";
 		};
-		F2FC5B7D5F33F4BC60738D261D32E28A /* Classes */ = {
+		E28901B324C237F7E99E9810D2B4F745 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				B0C6A72E1CC55BE40064B1F2 /* FerrisMenu.swift */,
+				98CADAB993B9C44DCD35F6184EBA4676 /* FerrisMenu */,
 			);
-			path = Classes;
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		E888361DC0BBE656FE5EBDF87D841BE8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				760CE287FB6002FACD3944549C155DA6 /* FerrisMenu.bundle */,
+				A3B8144C5C91D08F0077A05E77BE7951 /* FerrisMenu.framework */,
+				771E59B605EB58E19A766DC34F26B4E3 /* Pods_FerrisMenu_Example.framework */,
+				80FF20AEFD03EB541E36A8ECA9C74A15 /* Pods_FerrisMenu_Tests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F6165586E8365496CA354FCAF8E7EBA2 /* Pods-FerrisMenu_Tests */ = {
@@ -249,59 +253,58 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		412F65AC850552745E510915ACB57ABE /* Headers */ = {
+		61A4227B0A91A86F366D005D59C102B7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86EC47A27606CF026728919F86F282F0 /* FerrisMenu-umbrella.h in Headers */,
+				CB7D1EC4909D4DF6572E21BBDBABACF9 /* FerrisMenu-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		60A3FF2E797A708FA6F7685BD70A194A /* Headers */ = {
+		8AD18AC697F6DF0000E1E102B1A70322 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9077932D6D8F6F875BD03432CCA61970 /* Pods-FerrisMenu_Tests-umbrella.h in Headers */,
+				D3D7AF55C9913EB0E52E37C7CBF61AA4 /* Pods-FerrisMenu_Tests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		61E44D0DD09B36BD7CC28FF2F8A97664 /* Headers */ = {
+		DAD7673F5FB1592F5C9032D8D49DFE9D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57BC6CA3D024B5A5B1BDED0EED4F29AF /* Pods-FerrisMenu_Example-umbrella.h in Headers */,
+				96B7CADC82CBB92E635A421B81848410 /* Pods-FerrisMenu_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8F01A6D0F1C16728DE01EB3EAC652080 /* FerrisMenu */ = {
+		4548C50E0A45B08175E71AB2018CDCB6 /* Pods-FerrisMenu_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4977B5E2BF080EB1B6D5576D9BF0C076 /* Build configuration list for PBXNativeTarget "FerrisMenu" */;
+			buildConfigurationList = 01100156BF1981858E58E0F1423FEBBD /* Build configuration list for PBXNativeTarget "Pods-FerrisMenu_Tests" */;
 			buildPhases = (
-				DD5C26F4E3F8AEB2603D463444711F1A /* Sources */,
-				73D7E599FC3004A66CC7F7BA7F9D3863 /* Frameworks */,
-				BAA6940D4B9A8A53A77F3D3F13A1C85E /* Resources */,
-				412F65AC850552745E510915ACB57ABE /* Headers */,
+				80FCD3E91FB28E0377213ACEA7D4B4CA /* Sources */,
+				D6ADF53B1FDAB8CB0FCE7948E9166DE5 /* Frameworks */,
+				8AD18AC697F6DF0000E1E102B1A70322 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9DEE6F340225EE2ED0C4480DF5B36812 /* PBXTargetDependency */,
+				EE708A7F20E051C39348392F4EEAF781 /* PBXTargetDependency */,
 			);
-			name = FerrisMenu;
-			productName = FerrisMenu;
-			productReference = CA23E62BC708E97836841DE486244746 /* FerrisMenu.framework */;
+			name = "Pods-FerrisMenu_Tests";
+			productName = "Pods-FerrisMenu_Tests";
+			productReference = 80FF20AEFD03EB541E36A8ECA9C74A15 /* Pods_FerrisMenu_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9C2CF6130AC3BA2DD421CB75B1520C27 /* FerrisMenu-FerrisMenu */ = {
+		AABE14FFA00888CCF72FD7A9D5D828C4 /* FerrisMenu-FerrisMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C987F73C1B98DC7B1E8C7D9492E49FD3 /* Build configuration list for PBXNativeTarget "FerrisMenu-FerrisMenu" */;
+			buildConfigurationList = B4BA8581BDC03E749FFF70352FFB3AA4 /* Build configuration list for PBXNativeTarget "FerrisMenu-FerrisMenu" */;
 			buildPhases = (
-				74D81CADC32DEDEDD5DDF04AB0496678 /* Sources */,
-				4B6C467D638FC4D3A4FF51585E3EB41C /* Frameworks */,
-				974F689B52D154806D97D4BEC244293F /* Resources */,
+				3724E81026E5BCAC175D5C8B22165902 /* Sources */,
+				22764F0F9304F55CB186A60BCF360468 /* Frameworks */,
+				B4F244E03B0181B01E113413EA1410EC /* Resources */,
 			);
 			buildRules = (
 			);
@@ -309,43 +312,44 @@
 			);
 			name = "FerrisMenu-FerrisMenu";
 			productName = "FerrisMenu-FerrisMenu";
-			productReference = 30CAEA5A0F29B6D5F306E61516A86E79 /* FerrisMenu.bundle */;
+			productReference = 760CE287FB6002FACD3944549C155DA6 /* FerrisMenu.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
-		B64806FFE332321616433C87CC883D8C /* Pods-FerrisMenu_Example */ = {
+		D6826BD3CC392C0A999FB5367FADB0B1 /* Pods-FerrisMenu_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69807CFCF73661AE629E8362BCBA0AE2 /* Build configuration list for PBXNativeTarget "Pods-FerrisMenu_Example" */;
+			buildConfigurationList = 7FF54486DED433EBEFEAA497372A83A1 /* Build configuration list for PBXNativeTarget "Pods-FerrisMenu_Example" */;
 			buildPhases = (
-				BC56F62186A033B046DA62B56022277D /* Sources */,
-				3E129B24B78AE3997D084CE32649DFC6 /* Frameworks */,
-				61E44D0DD09B36BD7CC28FF2F8A97664 /* Headers */,
+				66A3DADA8C6E30F6701965CCCD3B1E6B /* Sources */,
+				3CF7C5444276F25F4F92BA0ABE943AD4 /* Frameworks */,
+				DAD7673F5FB1592F5C9032D8D49DFE9D /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0C310BB0C9C605616A7B4D6D2E1F12A8 /* PBXTargetDependency */,
+				61E00445B1F5ED601008694A60805A0D /* PBXTargetDependency */,
 			);
 			name = "Pods-FerrisMenu_Example";
 			productName = "Pods-FerrisMenu_Example";
-			productReference = 125287EFC0DE8754E1804E71D62AFF2D /* Pods_FerrisMenu_Example.framework */;
+			productReference = 771E59B605EB58E19A766DC34F26B4E3 /* Pods_FerrisMenu_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F8CF9C3F298EF0517E1BFD413D4346CA /* Pods-FerrisMenu_Tests */ = {
+		FEC2D85B40A499CF2D87E040E7E71CDE /* FerrisMenu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6CFAAB5D6CD0C3C37395D3016E2D076 /* Build configuration list for PBXNativeTarget "Pods-FerrisMenu_Tests" */;
+			buildConfigurationList = 4FD2DDE64804168B2AEE6C597B47D452 /* Build configuration list for PBXNativeTarget "FerrisMenu" */;
 			buildPhases = (
-				B53955BFED541E50093091C611BB594B /* Sources */,
-				0745FF2C99C475DA38DDD29BC4C3391C /* Frameworks */,
-				60A3FF2E797A708FA6F7685BD70A194A /* Headers */,
+				F8F55ED0724BBCC1F025961D02588B6A /* Sources */,
+				B8671B77FE5BE0CC049AD5E960662CB5 /* Frameworks */,
+				963945028C1C89BBC9E625CB891E1C5C /* Resources */,
+				61A4227B0A91A86F366D005D59C102B7 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CF53E0BA207C7494EFA02F46E1899B7C /* PBXTargetDependency */,
+				320EA9FA3A186F4C81657E88A153C2C4 /* PBXTargetDependency */,
 			);
-			name = "Pods-FerrisMenu_Tests";
-			productName = "Pods-FerrisMenu_Tests";
-			productReference = 98EB5468F7C0127493C415BB24B120FD /* Pods_FerrisMenu_Tests.framework */;
+			name = FerrisMenu;
+			productName = FerrisMenu;
+			productReference = A3B8144C5C91D08F0077A05E77BE7951 /* FerrisMenu.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -354,8 +358,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0730;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -365,97 +369,98 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 050990BBDDCB8978927B8C2616DD66B4 /* Products */;
+			productRefGroup = E888361DC0BBE656FE5EBDF87D841BE8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8F01A6D0F1C16728DE01EB3EAC652080 /* FerrisMenu */,
-				9C2CF6130AC3BA2DD421CB75B1520C27 /* FerrisMenu-FerrisMenu */,
-				B64806FFE332321616433C87CC883D8C /* Pods-FerrisMenu_Example */,
-				F8CF9C3F298EF0517E1BFD413D4346CA /* Pods-FerrisMenu_Tests */,
+				FEC2D85B40A499CF2D87E040E7E71CDE /* FerrisMenu */,
+				AABE14FFA00888CCF72FD7A9D5D828C4 /* FerrisMenu-FerrisMenu */,
+				D6826BD3CC392C0A999FB5367FADB0B1 /* Pods-FerrisMenu_Example */,
+				4548C50E0A45B08175E71AB2018CDCB6 /* Pods-FerrisMenu_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		974F689B52D154806D97D4BEC244293F /* Resources */ = {
+		963945028C1C89BBC9E625CB891E1C5C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78083DF78A547223309882483E26CAD2 /* FerrisMenu.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAA6940D4B9A8A53A77F3D3F13A1C85E /* Resources */ = {
+		B4F244E03B0181B01E113413EA1410EC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E2D4CDF9640FA93B76A4F451FB99050 /* FerrisMenu.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		74D81CADC32DEDEDD5DDF04AB0496678 /* Sources */ = {
+		3724E81026E5BCAC175D5C8B22165902 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B53955BFED541E50093091C611BB594B /* Sources */ = {
+		66A3DADA8C6E30F6701965CCCD3B1E6B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EB9CB51C8302862939087A41F280812 /* Pods-FerrisMenu_Tests-dummy.m in Sources */,
+				D4F40E0F85A6E0D48B458A219223F92F /* Pods-FerrisMenu_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BC56F62186A033B046DA62B56022277D /* Sources */ = {
+		80FCD3E91FB28E0377213ACEA7D4B4CA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66C2CC1A39433F61D18B7B5EF2FF14BA /* Pods-FerrisMenu_Example-dummy.m in Sources */,
+				53C496670B797C20465F96F1F551A555 /* Pods-FerrisMenu_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD5C26F4E3F8AEB2603D463444711F1A /* Sources */ = {
+		F8F55ED0724BBCC1F025961D02588B6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0C6A72F1CC55BE40064B1F2 /* FerrisMenu.swift in Sources */,
-				A3E80649EF9F7DA4F69B08ACC8F1D174 /* FerrisMenu-dummy.m in Sources */,
+				B38E1030D1DF84B3102293693269DBB7 /* FerrisMenu-dummy.m in Sources */,
+				2FA4DC7ECA27973DA9A2E595967F7A4D /* FerrisMenu.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0C310BB0C9C605616A7B4D6D2E1F12A8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FerrisMenu;
-			target = 8F01A6D0F1C16728DE01EB3EAC652080 /* FerrisMenu */;
-			targetProxy = 7930BC5CE116F901DF072F3EB8BA975A /* PBXContainerItemProxy */;
-		};
-		9DEE6F340225EE2ED0C4480DF5B36812 /* PBXTargetDependency */ = {
+		320EA9FA3A186F4C81657E88A153C2C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "FerrisMenu-FerrisMenu";
-			target = 9C2CF6130AC3BA2DD421CB75B1520C27 /* FerrisMenu-FerrisMenu */;
-			targetProxy = 965018A8AFE96E299434419D44EC3A6A /* PBXContainerItemProxy */;
+			target = AABE14FFA00888CCF72FD7A9D5D828C4 /* FerrisMenu-FerrisMenu */;
+			targetProxy = 88DCB49F83B3526955F6D96C19AAF110 /* PBXContainerItemProxy */;
 		};
-		CF53E0BA207C7494EFA02F46E1899B7C /* PBXTargetDependency */ = {
+		61E00445B1F5ED601008694A60805A0D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = FerrisMenu;
-			target = 8F01A6D0F1C16728DE01EB3EAC652080 /* FerrisMenu */;
-			targetProxy = 435841682874967BDCBC9F2116A18C0A /* PBXContainerItemProxy */;
+			target = FEC2D85B40A499CF2D87E040E7E71CDE /* FerrisMenu */;
+			targetProxy = 175BD510FB1C6007E4D59CF1AC4A8806 /* PBXContainerItemProxy */;
+		};
+		EE708A7F20E051C39348392F4EEAF781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FerrisMenu;
+			target = FEC2D85B40A499CF2D87E040E7E71CDE /* FerrisMenu */;
+			targetProxy = 96F833BCBA2410D20EBE794E8FB56E38 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */ = {
+		13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -469,74 +474,14 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		2819D9FAD8B255AE352CD774E1997575 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9FFE1F3DF980FF79B357AC6FB16AC79 /* FerrisMenu.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/FerrisMenu/FerrisMenu-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/FerrisMenu/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/FerrisMenu/FerrisMenu.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = FerrisMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		552D02D5BA751AC2E8790D2811D496CA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -547,174 +492,65 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		5CF0306ED4AF22E46B70140A683A5D17 /* Debug */ = {
+		562C45B4E305F790EBDA91066441D2BB /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9FFE1F3DF980FF79B357AC6FB16AC79 /* FerrisMenu.xcconfig */;
+			baseConfigurationReference = F0EB89988E9BC9A20A5895D2EBD7EB4D /* FerrisMenu.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/FerrisMenu/FerrisMenu-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FerrisMenu/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/FerrisMenu/FerrisMenu.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = FerrisMenu;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		71D32EC971C20170AFE38E81F3CE14A1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9FFE1F3DF980FF79B357AC6FB16AC79 /* FerrisMenu.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = FerrisMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		8ECBB9CA7F72B70877B5A3F75A1E13DD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9FFE1F3DF980FF79B357AC6FB16AC79 /* FerrisMenu.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = FerrisMenu;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		9ADBDE9BF6540C43960E3DC71A9DD922 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E234B05797EFE313485595705B4A584 /* Pods-FerrisMenu_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FerrisMenu_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FerrisMenu_Tests/Pods-FerrisMenu_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FerrisMenu_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D8106361ACA40FC88A348E9AA28A64CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26A3C158050898DBB8E756C659444010 /* Pods-FerrisMenu_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FerrisMenu_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FerrisMenu_Example/Pods-FerrisMenu_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FerrisMenu_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DCFAD3820F4C80D8938BEED6F6E96953 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D78E35C81650C84FD41114D331D7F887 /* Pods-FerrisMenu_Tests.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-FerrisMenu_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FerrisMenu_Tests/Pods-FerrisMenu_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FerrisMenu_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		DD1E93C989E65DD0EC9C276EEE8D70D3 /* Debug */ = {
+		85DA12A2817B3E3961D7A92DDCF07B11 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8BAB0515C20A01A60E9293187E9AB332 /* Pods-FerrisMenu_Example.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Target Support Files/Pods-FerrisMenu_Example/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-FerrisMenu_Example/Pods-FerrisMenu_Example.modulemap";
@@ -732,51 +568,263 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A646EF4F44DFC9AD66B0C6EE63D02275 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E234B05797EFE313485595705B4A584 /* Pods-FerrisMenu_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FerrisMenu_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FerrisMenu_Tests/Pods-FerrisMenu_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FerrisMenu_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A850D145FB21BD1B08523A8B9130D858 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0EB89988E9BC9A20A5895D2EBD7EB4D /* FerrisMenu.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FerrisMenu";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/FerrisMenu/ResourceBundle-FerrisMenu-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PRODUCT_NAME = FerrisMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		B2B797ADCDCDA6E2321EB4DEBFE3E029 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D78E35C81650C84FD41114D331D7F887 /* Pods-FerrisMenu_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FerrisMenu_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FerrisMenu_Tests/Pods-FerrisMenu_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FerrisMenu_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C42E1AA627414EA41169D7653E531E8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26A3C158050898DBB8E756C659444010 /* Pods-FerrisMenu_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FerrisMenu_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FerrisMenu_Example/Pods-FerrisMenu_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FerrisMenu_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DA3E783D1C0E5D329E0B70582A0C8719 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0EB89988E9BC9A20A5895D2EBD7EB4D /* FerrisMenu.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FerrisMenu";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/FerrisMenu/ResourceBundle-FerrisMenu-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				PRODUCT_NAME = FerrisMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		EDA46487DE7292B91EF9DB161CF92FD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0EB89988E9BC9A20A5895D2EBD7EB4D /* FerrisMenu.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FerrisMenu/FerrisMenu-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FerrisMenu/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FerrisMenu/FerrisMenu.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FerrisMenu;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		01100156BF1981858E58E0F1423FEBBD /* Build configuration list for PBXNativeTarget "Pods-FerrisMenu_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A646EF4F44DFC9AD66B0C6EE63D02275 /* Debug */,
+				B2B797ADCDCDA6E2321EB4DEBFE3E029 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				552D02D5BA751AC2E8790D2811D496CA /* Debug */,
-				10DE1947DAC0ED28F6C0A9F9BD75D546 /* Release */,
+				13E96A645A77DAD1FD4F541F18F5DDBF /* Debug */,
+				862AF3139CD84E18D34FAF2F43CD0DA6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4977B5E2BF080EB1B6D5576D9BF0C076 /* Build configuration list for PBXNativeTarget "FerrisMenu" */ = {
+		4FD2DDE64804168B2AEE6C597B47D452 /* Build configuration list for PBXNativeTarget "FerrisMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5CF0306ED4AF22E46B70140A683A5D17 /* Debug */,
-				2819D9FAD8B255AE352CD774E1997575 /* Release */,
+				562C45B4E305F790EBDA91066441D2BB /* Debug */,
+				EDA46487DE7292B91EF9DB161CF92FD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69807CFCF73661AE629E8362BCBA0AE2 /* Build configuration list for PBXNativeTarget "Pods-FerrisMenu_Example" */ = {
+		7FF54486DED433EBEFEAA497372A83A1 /* Build configuration list for PBXNativeTarget "Pods-FerrisMenu_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD1E93C989E65DD0EC9C276EEE8D70D3 /* Debug */,
-				D8106361ACA40FC88A348E9AA28A64CB /* Release */,
+				85DA12A2817B3E3961D7A92DDCF07B11 /* Debug */,
+				C42E1AA627414EA41169D7653E531E8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6CFAAB5D6CD0C3C37395D3016E2D076 /* Build configuration list for PBXNativeTarget "Pods-FerrisMenu_Tests" */ = {
+		B4BA8581BDC03E749FFF70352FFB3AA4 /* Build configuration list for PBXNativeTarget "FerrisMenu-FerrisMenu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9ADBDE9BF6540C43960E3DC71A9DD922 /* Debug */,
-				DCFAD3820F4C80D8938BEED6F6E96953 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C987F73C1B98DC7B1E8C7D9492E49FD3 /* Build configuration list for PBXNativeTarget "FerrisMenu-FerrisMenu" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8ECBB9CA7F72B70877B5A3F75A1E13DD /* Debug */,
-				71D32EC971C20170AFE38E81F3CE14A1 /* Release */,
+				DA3E783D1C0E5D329E0B70582A0C8719 /* Debug */,
+				A850D145FB21BD1B08523A8B9130D858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

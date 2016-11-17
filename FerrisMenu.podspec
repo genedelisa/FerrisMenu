@@ -8,9 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = "FerrisMenu"
-  s.version          = "0.3.1"
+  s.version          = "0.3.2"
   s.summary          = "A circular menu that rotates like a Ferris Wheel."
-
 
   s.description      = <<-DESC
      A circular menu where the text or icons stay upright upon rotation like a Ferris wheel.
@@ -26,11 +25,14 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.3'
 
   s.source_files = 'FerrisMenu/Classes/**/*'
-  s.resource_bundles = {
+
+s.resource_bundles = {
     'FerrisMenu' => ['FerrisMenu/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.pod_target_xcconfig =  {
+    'SWIFT_VERSION' => '3.0',
+  }
+
+
 end

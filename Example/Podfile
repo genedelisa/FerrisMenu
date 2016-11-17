@@ -1,11 +1,13 @@
 use_frameworks!
 
-target 'FerrisMenu_Example', :exclusive => true do
-  pod 'FerrisMenu', :path => '../'
+target 'FerrisMenu_Example' do
+  #pod 'FerrisMenu', :path => '../'
+  pod 'FerrisMenu', :path => '/Users/gene/Development/xcode/gene/Swift/FerrisMenu/'
 end
 
-target 'FerrisMenu_Tests', :exclusive => true do
-  pod 'FerrisMenu', :path => '../'
-
-  
+target 'FerrisMenu_Tests' do
+  pod 'FerrisMenu', :path => '/Users/gene/Development/xcode/gene/Swift/FerrisMenu/'
+  #pod 'FerrisMenu', :path => '../'
 end
+
+
