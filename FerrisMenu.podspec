@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "FerrisMenu"
-  s.version          = "0.3.3"
+  s.version          = "0.3.4"
   s.summary          = "A circular menu that rotates like a Ferris Wheel."
 
   s.description      = <<-DESC
@@ -26,9 +26,9 @@ Pod::Spec.new do |s|
 
   s.source_files = 'FerrisMenu/Classes/**/*'
 
-s.resource_bundles = {
-    'FerrisMenu' => ['FerrisMenu/Assets/*.png']
-  }
+#s.resource_bundles = {
+#    'FerrisMenu' => ['FerrisMenu/Assets/*.png']
+#  }
 
   s.pod_target_xcconfig =  {
     'SWIFT_VERSION' => '3.0',

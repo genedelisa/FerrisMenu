@@ -108,13 +108,13 @@ open class FerrisMenu : UIView {
         let startAngle = 0
         
         // in radians (2pi radians in a unit circle)
-        self.theta =  M_PI * 2.0 / self.numberOfButtons
+        self.theta =  Double.pi * 2.0 / self.numberOfButtons
         
         // so this is a half circle
-        //self.theta =  M_PI / (self.numberOfButtons - 1)
+        //self.theta =  Double.pi/ (self.numberOfButtons - 1)
         
         // this is a quarter circle
-        //self.theta =  M_PI / 2.0 / (self.numberOfButtons - 1)
+        //self.theta =  Double.pi/ 2.0 / (self.numberOfButtons - 1)
         
         
         for i in 0 ..< Int(items.count) {
@@ -329,9 +329,9 @@ open class FerrisMenu : UIView {
         
     }
     
-    func rotate(_ repeatCount:Float = FLT_MAX) {
+    func rotate(_ repeatCount:Float = Float.greatestFiniteMagnitude) {
         let rotation : CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
-        rotation.toValue = M_PI * 2.0
+        rotation.toValue = Double.pi * 2.0
         rotation.duration = 1
         rotation.isCumulative = true
         rotation.repeatCount = repeatCount
@@ -342,23 +342,23 @@ open class FerrisMenu : UIView {
 }
 
 extension Int {
-    var degreesToRadians: Double { return Double(self) * M_PI / 180 }
-    var radiansToDegrees: Double { return Double(self) * 180 / M_PI }
+    var degreesToRadians: Double { return Double(self) * Double.pi / 180 }
+    var radiansToDegrees: Double { return Double(self) * 180 / Double.pi}
 }
 
 extension Double {
-    var degreesToRadians: Double { return self * M_PI / 180 }
-    var radiansToDegrees: Double { return self * 180 / M_PI }
+    var degreesToRadians: Double { return self * Double.pi / 180 }
+    var radiansToDegrees: Double { return self * 180 / Double.pi}
 }
 
 extension CGFloat {
     var doubleValue:      Double  { return Double(self) }
-    var degreesToRadians: CGFloat { return CGFloat(doubleValue * M_PI / 180) }
-    var radiansToDegrees: CGFloat { return CGFloat(doubleValue * 180 / M_PI) }
+    var degreesToRadians: CGFloat { return CGFloat(doubleValue * Double.pi / 180) }
+    var radiansToDegrees: CGFloat { return CGFloat(doubleValue * 180 / .pi) }
 }
 
 extension Float  {
     var doubleValue:      Double { return Double(self) }
-    var degreesToRadians: Float  { return Float(doubleValue * M_PI / 180) }
-    var radiansToDegrees: Float  { return Float(doubleValue * 180 / M_PI) }
+    var degreesToRadians: Float  { return Float(doubleValue * Double.pi / 180) }
+    var radiansToDegrees: Float  { return Float(doubleValue * 180 / Double.pi) }
 }
