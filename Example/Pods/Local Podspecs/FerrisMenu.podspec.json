@@ -1,6 +1,6 @@
 {
   "name": "FerrisMenu",
-  "version": "0.3.2",
+  "version": "0.3.4",
   "summary": "A circular menu that rotates like a Ferris Wheel.",
   "description": "A circular menu where the text or icons stay upright upon rotation like a Ferris wheel.",
   "homepage": "https://github.com/genedelisa/FerrisMenu",
@@ -10,18 +10,13 @@
   },
   "source": {
     "git": "https://github.com/genedelisa/FerrisMenu.git",
-    "tag": "0.3.2"
+    "tag": "0.3.4"
   },
   "social_media_url": "https://twitter.com/GeneDeLisaDev",
   "platforms": {
     "ios": "9.3"
   },
   "source_files": "FerrisMenu/Classes/**/*",
-  "resource_bundles": {
-    "FerrisMenu": [
-      "FerrisMenu/Assets/*.png"
-    ]
-  },
   "pod_target_xcconfig": {
     "SWIFT_VERSION": "3.0"
   }

@@ -1,16 +1,16 @@
 PODS:
-  - FerrisMenu (0.3.2)
+  - FerrisMenu (0.3.4)
 
 DEPENDENCIES:
   - FerrisMenu (from `/Users/gene/Development/xcode/gene/Swift/FerrisMenu/`)
 
 EXTERNAL SOURCES:
   FerrisMenu:
-    :path: "/Users/gene/Development/xcode/gene/Swift/FerrisMenu/"
+    :path: /Users/gene/Development/xcode/gene/Swift/FerrisMenu/
 
 SPEC CHECKSUMS:
-  FerrisMenu: f7f5e3aa080d43fd782d1429c2c8c4bfcdfadab1
+  FerrisMenu: ee5d7e39b1f91d7ce013f4f90bb693d23f2d5dbc
 
 PODFILE CHECKSUM: 963b09cb6e7733bebc072856bde4bf41df810d29
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.3.1
